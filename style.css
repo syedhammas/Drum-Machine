@@ -1,0 +1,87 @@
+body {
+    font-family: 'Poppins', sans-serif;  /* A modern, clean font */
+    background: #1c1c1c; /* Dark background for contrast */
+    color: white; /* Light text color for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #drum-machine {
+    text-align: center;
+    padding: 20px;
+    background: #2e2e2e; /* Slightly lighter background */
+    border-radius: 15px; /* Rounded corners for a smooth effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  #display {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #e63946; /* A vibrant red to make it pop */
+    font-weight: 600;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Glow effect */
+  }
+  
+  .pad-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .drum-pad {
+    background: linear-gradient(145deg, #3a3a3a, #1f1f1f); /* Smooth gradient for a modern feel */
+    border-radius: 12px;  /* Rounded corners for each pad */
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out; /* Subtle transition effects */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  }
+  
+  .drum-pad:hover {
+    background: linear-gradient(145deg, #e63946, #ff5722); /* Hover effect with a vibrant color change */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: scale(1.1); /* Slight zoom-in effect */
+  }
+  
+  .drum-pad:active {
+    transform: scale(0.95); /* Slight shrink on click for a tactile effect */
+  }
+  
+  .drum-pad:focus {
+    outline: none; /* Remove the default focus outline */
+  }
+  
+  @media (max-width: 768px) {
+    .pad-container {
+      grid-template-columns: repeat(3, 80px); /* Adjust grid layout on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #drum-machine {
+      padding: 10px;
+      width: 90%; /* Adjust width on very small screens */
+    }
+  
+    .pad-container {
+      grid-template-columns: repeat(3, 70px);
+    }
+  
+    .drum-pad {
+      padding: 15px;
+      font-size: 1rem; /* Reduce size for smaller screens */
+    }
+  }
+  
